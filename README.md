@@ -43,7 +43,7 @@ git clone http://github.com/origamizyt/TurtleInspector.git
 
 在发行版本中，目录下的 `Inspector.exe` 即是 GUI 版本的程序。双击运行该程序会打开一个 GUI 窗口。
 
-![Gui_Startup](assets/doc/gui01.png)
+![Gui_Startup](assets/doc/gui01.PNG)
 
 可以看到，两个表格控件将整个窗体分为了两部分。左半部分为样例控制，右半部分为测试控制。整体布局是固定的，但是控件排列是响应式的，控件大小随窗体大小改变而改变。您可以自由地拉伸窗口。
 
@@ -51,7 +51,7 @@ git clone http://github.com/origamizyt/TurtleInspector.git
 
 这时的测试器还没有任何样例，您可以通过"添加样例"按钮添加一个新的样例。单击"添加样例"按钮，将弹出"添加样例"对话框。
 
-![Gui_AddSample_1](assets/doc/gui02.png)
+![Gui_AddSample_1](assets/doc/gui02.PNG)
 
 > 注：强烈建议您选择示例代码而不是图片文件，因为 JPEG 文件有可能是经压缩的，导致其颜色与图案发生改变。
 
@@ -74,11 +74,11 @@ turtle.end_fill()
 
 单击"选择..."按钮，在弹出的对话框中选择示例代码文件。程序会自动帮您运行该文件并获取结果。此时您应该会看到小海龟作图的窗口一闪而过，而图像出现在右侧的图片框中。
 
-![Gui_AddSample_2](assets/doc/gui03.png)
+![Gui_AddSample_2](assets/doc/gui03.PNG)
 
 在下方"应提交的文件名"文本框中输入测试者应提交的文件名，如`T1.py`。此时下方的"OK"按钮会被启用，单击"OK"按钮完成添加样例。应该能看到添加的样例出现在样例列表中。
 
-![Gui_AddSample_3](assets/doc/gui04.png)
+![Gui_AddSample_3](assets/doc/gui04.PNG)
 
 单击选中一个样例并单击"删除样例"按钮可以删除该样例。单击"清除样例"按钮可以删除所有添加的样例。此时可以继续通过"添加样例"按钮添加样例。本教程中使用的样例还有另一个示例代码：
 ```py
@@ -111,30 +111,30 @@ turtle.end_fill()
 
 回到程序中，单击"选择文件夹"按钮并选择 `suites` 文件夹。此时程序会提示您重构测试器，单击"Yes"按钮并等待测试器重构。应该可以看到 `Suite1` 出现在右侧的列表中。
 
-![Gui_Inspection_1](assets\doc\gui05.png)
+![Gui_Inspection_1](assets\doc\gui05.PNG)
 
 选中 `Suite1` 并单击"测试选中按钮"来测试 `Suite1`。应该会看到小海龟画图的窗口出现并绘制出代码中的图案。当窗口关闭时，可以看到 `Suite1` 的总分与平均分。
 
-![Gui_Inspection_2](assets\doc\gui06.png)
+![Gui_Inspection_2](assets\doc\gui06.PNG)
 
 双击 `Suite1` 会弹出结果窗口，在其中双击一项可以查看测试结果，右键点击"查看源"可以查看源代码。
 
 <div style='display: flex; justify-content: space-between'>
-    <img src="assets\doc\gui07.png"
+    <img src="assets\doc\gui07.PNG"
     style='max-width: 30%;' alt='Gui_Result_1'/>
-    <img src="assets\doc\gui08.png" 
+    <img src="assets\doc\gui08.PNG" 
     style='max-width: 30%;' alt='Gui_Result_2'/>
-    <img src="assets\doc\gui09.png" 
+    <img src="assets\doc\gui09.PNG" 
     style='max-width: 30%;' alt='Gui_Result_3'/>
 </div><br/>
 
 切换至 `Suite1` 目录，可以发现多出了4个文件：`T1.inspect.json`, `T1.inspect.eps`, `T2.inspect.json`, `T2.inspect.eps`。这四个文件代表了两个题目的测试结果和图像。删除 `T1.inspect.json` 并在套件列表中右键点击刷新，应该可以看到 `Suite1` 的总分变为了 100 分。双击 `Suite1` 并双击 `T1` 题目可以看到缺失结果的提示。
 
-![Gui_Error_1](assets/doc/gui10.png)
+![Gui_Error_1](assets/doc/gui10.PNG)
 
 接下来构造一个错误的代码。在 `suites` 文件夹下创建 `Suite2` 文件夹，将第一个示例代码复制两次，分别命名为 `T1.py` 与 `T2.py`。第一个代码是完全正确的，而第二个则绘制了错误的图形。回到窗口中，在套件列表中右键点击刷新，`Suite2` 应该会出现在列表中。
 
-![Gui_Inspection_3](assets/doc/gui11.png)
+![Gui_Inspection_3](assets/doc/gui11.PNG)
 
 单击"测试未测试"按钮以测试 `Suite2`。应该会看到 `Suite2` 的总分并不是 200 分，而是介于 170~180 之间。双击 `Suite2` 能看到第一题是满分，而第二题不是。
 
@@ -142,7 +142,7 @@ turtle.end_fill()
 
 再次刷新套件列表并测试未测试的套件。可以看到 `Suite3` 的总分只有 100 分。双击 `Suite3` 并双击 `T2` 题目，将会弹出消息框告知您缺少题目文件。
 
-![Gui_Error_2](assets/doc/gui12.png)
+![Gui_Error_2](assets/doc/gui12.PNG)
 
 回到 `Suite3` 目录中，创建 `T2.py` 文件并输入以下代码：
 ```py
@@ -154,7 +154,7 @@ raise Exception("exception in code")
 
 选中 `Suite3` 并测试，双击 `Suite3` 并双击 `T2` 题目，将会弹出消息框告知您代码运行时错误。
 
-![Gui_Error_3](assets/doc/gui13.png)
+![Gui_Error_3](assets/doc/gui13.PNG)
 
 至此，测试部分就完成了。
 
@@ -212,7 +212,7 @@ os._exit(0)
 
 打开 GUI 窗口并刷新套件列表，点击"测试未测试"以测试 `Suite4`。在测试的过程中，会弹出消息框提示您危险代码的存在。
 
-![Gui_Error_4](assets/doc/gui14.png)
+![Gui_Error_4](assets/doc/gui14.PNG)
 
 ### 3.2 测试结果数字签名
 
@@ -231,7 +231,7 @@ os._exit(0)
 
 现在将 `token` 项最后两位改为 `00`，回到窗口并刷新套件列表，会发现 `Suite1` 的测试结果变为 100 分。双击 `Suite1` 并双击 `T1` 题目，将弹出消息框提示您签名有误。
 
-![Gui_Error_5](assets/doc/gui15.png)
+![Gui_Error_5](assets/doc/gui15.PNG)
 
 可以看出密钥一旦更改一点，产生的签名就大不相同。
 
