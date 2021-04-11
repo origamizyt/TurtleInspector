@@ -111,11 +111,11 @@ turtle.end_fill()
 
 回到程序中，单击"选择文件夹"按钮并选择 `suites` 文件夹。此时程序会提示您重构测试器，单击"Yes"按钮并等待测试器重构。应该可以看到 `Suite1` 出现在右侧的列表中。
 
-![Gui_Inspection_1](assets\doc\gui05.PNG)
+![Gui_Inspection_1](assets/doc/gui05.PNG)
 
 选中 `Suite1` 并单击"测试选中按钮"来测试 `Suite1`。应该会看到小海龟画图的窗口出现并绘制出代码中的图案。当窗口关闭时，可以看到 `Suite1` 的总分与平均分。
 
-![Gui_Inspection_2](assets\doc\gui06.PNG)
+![Gui_Inspection_2](assets/doc/gui06.PNG)
 
 双击 `Suite1` 会弹出结果窗口，在其中双击一项可以查看测试结果，右键点击"查看源"可以查看源代码。
 
