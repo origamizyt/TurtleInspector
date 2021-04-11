@@ -3,7 +3,13 @@ from sample import CodeSampleSource, JpegSampleSource
 from script import Inspector
 from image import *
 from PIL import Image
+from PIL.EpsImagePlugin import has_ghostscript
 import sys
+
+if not has_ghostscript():
+    print('Error: Please install Ghostscript first.')
+    print('Binaries can be found in the installation directory.')
+    sys.exit()
 
 if len(sys.argv) != 3:
     print('Usage: inspectx <sample_file> <inspection_file>')

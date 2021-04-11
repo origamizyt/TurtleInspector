@@ -6,6 +6,7 @@ from script import InspectionSuite, Inspector, get_inspection_name
 from sample import *
 from data import encode_base64
 from PIL.Image import Image
+from PIL.EpsImagePlugin import has_ghostscript
 
 ABOUT_MSG = \
 '''关于此软件：
@@ -697,6 +698,9 @@ class ViewImageDialog(QtWidgets.QDialog):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
-    win = MainWindow()
-    win.show()
-    app.exec_()
+    if not has_ghostscript():
+        QtWidgets.QMessageBox.critical(None, "依赖错误", "请先安装 Ghostscript。\n安装包可以在安装目录找到。")
+    else:
+        win = MainWindow()
+        win.show()
+        app.exec_()
